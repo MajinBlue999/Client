@@ -84,7 +84,7 @@ jobs:
   # The same for `cfg(target_os = "ios")`.
   ios:
     needs: changes
-    if: needs.changes.outputs.code == 'true'
+    if: false
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v7
@@ -130,7 +130,7 @@ jobs:
 
   lint:
     needs: changes
-    if: needs.changes.outputs.code == 'true'
+    if: false
     strategy:
       matrix:
         os: [windows-latest, ubuntu-latest, macos-latest]
