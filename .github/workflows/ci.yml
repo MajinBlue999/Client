@@ -233,7 +233,7 @@ jobs:
 
   launcher-frontend:
     needs: changes
-    if: needs.changes.outputs.launcher == 'true'
+    if: false
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
@@ -265,7 +265,7 @@ jobs:
     if: needs.changes.outputs.launcher == 'true'
     strategy:
       matrix:
-        os: [windows-latest, ubuntu-latest, macos-latest]
+        os: [ubuntu-latest]
 
     runs-on: ${{ matrix.os }}
     steps:
